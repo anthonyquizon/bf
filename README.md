@@ -27,3 +27,10 @@ endfunction
 
 command! Bf call FormatBQN()
 ```
+
+
+--- 
+
+## Tests
+- install entr
+- run ./test
