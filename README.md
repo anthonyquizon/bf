@@ -22,8 +22,8 @@ function! FormatBQN()
   call setbufline('%', 1, split(l:output, "\n"))
 endfunction
 
-" Autocmd to trigger function before saving buffer for .bqn files
+"Uncomment autocmd to trigger function before saving buffer for .bqn files
 "autocmd BufWritePre *.bqn call FormatBQN()
-command! FormatBQN call FormatBQN()
-command! BF call FormatBQN()
+
+command! Bf call FormatBQN()
 ```
