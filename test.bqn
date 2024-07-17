@@ -3,12 +3,10 @@
 a←↕10           # comment 1
 b←↕10 ⋄ c←↕10 ⋄ d←10  # comment 2 # comment
 e←"this string # should not be formatted" # However this comment should be formatted
-f←'#' # Should not format comment char but should format comment next to it
+f←'#' # FIXME: Should not format comment char but should format comment next to it
        # Should not format
 x←↕10                                                                                               # comment space should reduced
-y←↕10                       # should be formatter
 
-    # should not be formatted
     # FIXME: should not be formatted # should not be formatted
 "'" # FIXME: this should be formatted
 ''' # FIXME: this should be formatted
