@@ -1,29 +1,29 @@
 #!/usr/bin/env bqn
 
-#
-none‿space‿tab‿comment‿newline←↕5
-any←none
+#none‿space‿tab‿comment‿newline←↕5
+#any←none
 
-Format ← {
-  ch←𝕩 ⋄ t←@
+#Format ← {
+  #ch←𝕩 ⋄ t←@
 
-  •Show ch
-  { t↩∨´space‿comment‿tab‿newline×ch⊸=¨" #"∾(@+9‿10) } # tokenise characters
-  #{ m←t=newline ⋄ t↩ } 
-  { 
-    •Show +`t=newline
-    •Show +`t=comment
+  #•Show ch
+  #{ t↩∨´space‿comment‿tab‿newline×ch⊸=¨" #"∾(@+9‿10) } # tokenise characters
+  ##{ m←t=newline ⋄ t↩ } 
+  #{ 
+    #•Show +`t=newline
+    #•Show +`t=comment
 
-  } # first 
+  #} # first 
 
-}
+#}
 
-Main ← {
-  𝕊 ⟨⟩: Format •FChars"/dev/stdin";
-  𝕊 𝕩 : Format¨•file.Chars¨𝕩
-}
+#Main ← {
+  #𝕊 ⟨⟩: Format •FChars"/dev/stdin";
+  #𝕊 𝕩 : Format¨•file.Chars¨𝕩
+#}
 
-Main •args
+•Show •args
+•Show •FChars "/dev/stdin"
 
 #Format¨•file.Chars¨f
 

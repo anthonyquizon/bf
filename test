@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+run='
+for file in ./tests/*; do echo "Test: $file"; cat $file | ./bf; done;
+'
+
+ls | entr sh -c "$run"
+
+
