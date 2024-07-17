@@ -1,6 +1,6 @@
 #!/usr/bin/env bqn
 
-max_col←50
+max_col←50 
 other‿cm‿quote←↕3
 
 ch←•FLines "/dev/stdin"
