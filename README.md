@@ -2,7 +2,10 @@
 
 Formats BQN code into two separate columns for code and comments
 
+Before:
 <img width="707" alt="Screenshot 2024-07-17 at 12 14 51 pm" src="https://github.com/user-attachments/assets/ed1ef835-cace-4b81-b609-192972b423c2">
+
+After:
 <img width="939" alt="Screenshot 2024-07-17 at 12 15 09 pm" src="https://github.com/user-attachments/assets/593c06bf-1a90-4f0b-9089-ebceb29f3d14">
 
 Installation for vim (assumes bf installed in `$PATH`):
