@@ -9,7 +9,11 @@ Before:
 After:
 
 <img width="939" alt="Screenshot 2024-07-17 at 12 15 09 pm" src="https://github.com/user-attachments/assets/593c06bf-1a90-4f0b-9089-ebceb29f3d14">
+
+
 ---
+
+
 Installation for vim (assumes bf installed in `$PATH`):
 ```vim
 function! FormatBQN()
