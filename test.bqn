@@ -10,3 +10,4 @@ f←'#' # FIXME: Should not format comment char but should format comment next t
     # FIXME: should not be formatted # should not be formatted
 "'" # FIXME: this should be formatted
 ''' # FIXME: this should be formatted
+z←↕10         #FIXME comment should have space after hash
