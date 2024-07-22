@@ -13,4 +13,4 @@ z←⌽¨0<+`¨0=⌽¨t↑˜¨∾1↑¨/¨m                # mark tail whitespac
 g←z/¨ch↑˜¨∾1↑¨/¨m                       # grouped characters remove tail spaces
 n←max⌊⌈´(≠¨g)∾(¬v)/≠¨ch                 # find comment with largest column width or find largest line
 s←' '¨¨↕¨v×pad+0⌈n-≠¨g
-•Out ∾(@+10)⊸∾¨g∾¨s∾¨e
+•Out 1↓∾(@+10)⊸∾¨g∾¨s∾¨e                
