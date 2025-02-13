@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-find . | entr -s "cat test/cases/$1.bqn | ${2:-pbqn} bf"
+find . | entr -s "cat test/cases/$1.bqn | ${2:-bqn} bf"
