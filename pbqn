@@ -1,1 +1,0 @@
-find . | entr -s "cat test/cases/$1.bqn | pbqn bf"
