@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-ls | entr sh -c 'cat test.bqn | ./bf'
-
-
