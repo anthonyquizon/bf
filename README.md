@@ -34,3 +34,8 @@ command! Bf call FormatBQN()
 ## Tests
 - install entr
 - run ./test
+
+
+## References
+- https://github.com/codereport/bqn-format/blob/main/bqn-format
+- https://www.youtube.com/watch?v=JAWa29FLO3Q

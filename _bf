@@ -1,0 +1,26 @@
+#!/usr/bin/env bqn
+
+# Reference: https://github.com/codereport/bqn-format/blob/main/bqn-format
+_AdjMap   ⇐ {¯1⊸↓𝔽1⊸↓}
+_ChunkKey ⇐ {(0∾+`Differ𝔽¨𝕩)⊔𝕩}
+Differ ⇐ ≠ _AdjMap
+
+Asm ← {¬(≠`⊸∨)"'"""∊˜𝕩} # anti string mask # TODO fix
+Ca  ← {(∨´(Asm∧'#'⊸=)𝕩)∧∨´' '≠(∧`(Asm∧'#'⊸≠))⊸/𝕩}             # comment alignable
+
+SplitMask ⇐ {⟨⟩⊸≢¨⊸/𝕩⊔˜1-˜(¬∧1++`)𝕨}
+Join      ⇐ { 0=≠𝕩 ? 𝕩 ; (⊣∾𝕨∾⊢)´𝕩 }
+Trim      ⇐ (¬·(∧`⌾⌽∨∧`)' '=⊢)⊸/
+
+
+Align ← { w𝕊𝕩:
+    Sma ← (Asm∧∊⟜w)⊸SplitMask  # split mask with asm
+    n   ← ⌈´(+´·∨`⌾⌽' '≠⊑∘Sma)¨𝕩 # length for alignment
+    {(' '∾w∾' ')Join Trim¨⌾(1⊸↓)n⊸↑⌾⊑Sma 𝕩}¨𝕩
+}
+
+l←•FLines "/dev/stdin"
+l↩{(¬·∧`⌾⌽' '⊸=)⊸/𝕩}¨l            # remove trailing whitespace
+g ← Ca _ChunkKey l               # create chunks for aligning
+l ↩ ∾{ Ca⊑𝕩 ? "#" Align 𝕩 ⋄ ; 𝕩 }¨g # align # symbols
+•Out 1↓∾(@+10)⊸∾¨l

@@ -5,7 +5,8 @@ e←"this string # should not be formatted" # However this comment should be for
 x←↕10                                                                                               # comment space should reduced
 
 
-f←'#' # FIXME: Should not format comment char but should format comment next to it
-    # FIXME: should not be formatted # should not be formatted
-"'" # FIXME: this should be formatted
-''' # FIXME: this should be formatted
+f←'#' # Should not format comment char but should format comment next to it
+    # should not be formatted # should not be formatted
+"hello' world" # this should be formatted
+''' # this should be formatted
+Q←{ 𝕩 } # trailing whitespace should be removed                          
